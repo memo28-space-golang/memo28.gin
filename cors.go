@@ -1,4 +1,4 @@
-package memo28Gin
+package memo_gin
 
 import (
 	"fmt"

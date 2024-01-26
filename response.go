@@ -1,8 +1,7 @@
-package memo28Gin
+package memo_gin
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/memo28-space-golang/memo28.map/pkg"
 	"net/http"
 )
 

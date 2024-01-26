@@ -2,6 +2,7 @@ package memo_gin
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/memo28-space-golang/memo28.map"
 	"net/http"
 )
 
@@ -21,8 +22,8 @@ func (receiver Response) Error(context *gin.Context, code int, data interface{},
 }
 
 // EncapsulatesResponse 组装响应数据
-func (receiver Response) EncapsulatesResponse(code int, data interface{}, msg string) memo28Map.Map[string, any] {
-	u := memo28Map.Map[string, any]{}
+func (receiver Response) EncapsulatesResponse(code int, data interface{}, msg string) memo_map.Map[string, any] {
+	u := memo_map.Map[string, any]{}
 	u.Add("code", code).Add("data", data).Add("msg", msg)
 	return u
 }

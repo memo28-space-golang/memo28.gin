@@ -1,9 +1,17 @@
+/*
+ * @Author: @memo28.repo
+ * @Date: 2024-07-17 15:42:03
+ * @LastEditTime: 2024-07-17 15:54:01
+ * @Description:
+ * @FilePath: /memo28.gin/response.go
+ */
 package memo_gin
 
 import (
-	"github.com/gin-gonic/gin"
-	memo_map "github.com/memo28-space-golang/memo28.map"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
+	memoMap "github.com/memo28-space-golang/memo28.map"
 )
 
 type Response struct {
@@ -22,8 +30,8 @@ func (receiver Response) Error(context *gin.Context, code int, data interface{},
 }
 
 // EncapsulatesResponse 组装响应数据
-func (receiver Response) EncapsulatesResponse(code int, data interface{}, msg string) memo_map.Map[string, any] {
-	u := memo_map.Map[string, any]{}
+func (receiver Response) EncapsulatesResponse(code int, data interface{}, msg string) memoMap.Map[string, any] {
+	u := memoMap.Map[string, any]{}
 	u.Add("code", code).Add("data", data).Add("msg", msg)
 	return u
 }
